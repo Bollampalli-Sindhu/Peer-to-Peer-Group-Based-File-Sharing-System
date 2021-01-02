@@ -10,14 +10,21 @@
     - **To install OpenSSL library** : sudo apt-get install openssl
 
 **Platform**: Linux
+## Compile code
+##### tracker : 
+>g++ tracker.cpp -o tracker -pthread
+##### client :
+>g++ client.cpp -o client -lssl -lcrypto -pthread
 ## Run code
 ##### Tracker
-> ./tracker​ <TRACKER INFO FILE> <TRACKER NUMBER>
+> `./tracker​ <TRACKER INFO FILE> <TRACKER NUMBER>`
+>
 > ex: ./tracker tracker_info.txt 1
 ##### Client
 1. Run code
-    > ./client​ <IP>:<PORT> <TRACKER INFO FILE>
-ex: ./client 127.0.0.1:18000 tracker_info.txt
+    > `./client​ <IP>:<PORT> <TRACKER INFO FILE> <TRACKER NUMBER>`
+    >
+    > ex: ./client 127.0.0.1:8000 tracker_info.txt 1
 2. Create user account:
     > create_user​ <user_id> <password>
 3. Login:
